@@ -1,0 +1,16 @@
+FROM chimeralinux/chimera
+
+RUN apk update
+RUN apk upgrade
+
+# required 
+RUN apk add --no-cache \
+  linux-headers musl-devel musl-devel-static \
+  curl gmake clang libunwind-devel libunwind-devel-static \
+  libatomic-chimera-devel libatomic-chimera-devel-static git libarchive-progs \
+  bash xz
+
+ENV XZ_OPT=-e9
+COPY build-static-amneziawg-tools.sh build-static-amneziawg-tools.sh
+RUN chmod +x ./build-static-amneziawg-tools.sh
+RUN bash ./build-static-amneziawg-tools.sh
