@@ -8,7 +8,7 @@ RUN apk upgrade
 
 # required amneziawg-tools
 RUN apk add --no-cache \
-  gcc make linux-headers musl-dev git
+  gcc make linux-headers musl-dev git \
   bash xz
 
 ENV XZ_OPT=-e9
