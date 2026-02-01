@@ -15,5 +15,5 @@ LDFLAGS="-static --static -no-pie -s" make WITH_WGQUICK=yes
 make install
 
 cd /usr/bin
-tar vcJf ./awg.tar.xz awg
+tar vcJf ./awg.tar.xz awg awg-quick
 mv ./awg.tar.xz /work/artifact/
