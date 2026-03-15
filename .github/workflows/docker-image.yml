@@ -31,5 +31,5 @@ jobs:
     - name: Upload static program
       uses: actions/upload-artifact@v4
       with:
-        name: althttpd-${{ matrix.dockeros }}-${{ matrix.os }}
+        name: awg-${{ matrix.dockeros }}-${{ matrix.os }}
         path: ./*.tar.xz
